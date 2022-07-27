@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.1.200:1521:ORA2022</property>
+        <!-- &amp;useUnicode=true&amp;characterEncoding=utf-8 -->
+        <property name="hibernate.connection.username">RINNV</property>
+        <property name="hibernate.connection.password">123</property>
+        <property name="hibernate.connection.CharSet">UTF-8</property>
+        <property name="hibernate.connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <!-- Khai báo các tập tin ánh xạ -->
+        <mapping resource="Sach.hbm.xml"/>
+        <mapping resource="ChuDe.hbm.xml"/>
+        <mapping class="vn.com.stanford.je1121.model.NguoiDung"/>
+    </session-factory>
+</hibernate-configuration>

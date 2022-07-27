@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Khai báo kiểu cho file tiles -->
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayoutAdmin"
+                template="/WEB-INF/admin/layout.jsp">
+        <put-attribute name="title"
+                       value="Template"/>
+        <put-attribute name="header"
+                       value="/WEB-INF/admin/header.jsp"/>
+        <put-attribute name="sidebar"
+                       value="/WEB-INF/admin/sidebar.jsp"/>
+        <put-attribute name="body"
+                       value="/WEB-INF/admin/body.jsp"/>
+    </definition>
+
+    <definition name="baseLayoutHome"
+                template="/WEB-INF/home/layout.jsp">
+        <put-attribute name="title" value="BookStore"/>
+        <put-attribute name="menu"
+                       value="/WEB-INF/home/menu.jsp"/>
+        <put-attribute name="header"
+                       value="/WEB-INF/home/header.jsp"/>
+        <put-attribute name="nav"
+                       value="/WEB-INF/home/nav.jsp"/>
+        <put-attribute name="footer"
+                       value="/WEB-INF/home/footer.jsp"/>
+        <put-attribute name="body"
+                       value="/WEB-INF/home/body.jsp"/>
+    </definition>
+
+    <definition name="quanLyThongTinSach" extends="baseLayoutAdmin">
+        <put-attribute name="title" value="BookStore - Quản lý sách"/>
+        <put-attribute name="body" value="/WEB-INF/views/admin/QuanLyThongTinSach.jsp"/>
+    </definition>
+    <definition name="themThongTinSach" extends="baseLayoutAdmin">
+        <put-attribute name="title" value="BookStore - Thêm thông tin sách"/>
+        <put-attribute name="body" value="/WEB-INF/views/admin/SachAdd.jsp"/>
+    </definition>
+<!--    <definition name="suaThongTinSach" extends="baseLayoutAdmin">-->
+<!--        <put-attribute name="title" value="BookStore - Thêm thông tin sách"/>-->
+<!--        <put-attribute name="body" value="/WEB-INF/views/admin/SachAdd.jsp"/>-->
+<!--    </definition>-->
+<!--    <definition name="xoaThongTinSach" extends="baseLayoutAdmin">-->
+<!--        <put-attribute name="title" value="BookStore - Quản lý sách"/>-->
+<!--        <put-attribute name="body" value="/WEB-INF/views/admin/QuanLyThongTinSach.jsp"/>-->
+<!--    </definition>-->
+    <definition name="quanLyThongTinChuDe" extends="baseLayoutAdmin">
+        <put-attribute name="title" value="BookStore - Quản lý chủ đề sách"/>
+        <put-attribute name="body" value="/WEB-INF/views/admin/ChuDeSach.jsp"/>
+    </definition>
+
+
+    <definition name="TrangChuSach" extends="baseLayoutHome">
+        <put-attribute name="title" value="Trang chủ - BookStore"/>
+        <put-attribute name="body" value="/WEB-INF/views/TrangChuSach.jsp"/>
+    </definition>
+</tiles-definitions>

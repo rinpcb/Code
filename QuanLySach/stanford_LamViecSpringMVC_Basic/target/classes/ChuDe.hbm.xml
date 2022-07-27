@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="vn.com.stanford.je1121.model">
+    <class name="vn.com.stanford.je1121.model.ChuDe" table="Chu_De">
+        <id name="maChuDe" type="string">
+            <column name="Ma_Chu_De"/>
+        </id>
+        <property name="tenChuDe" column="Ten_Chu_De" type="string" length="150"/>
+<!--        một chủ đề có nhiều sách-->
+<!--        <set name="sachs" table="Sach" lazy="true" fetch="select">-->
+<!--            <key column="MaChuDe"/>-->
+<!--            <one-to-many class="vn.com.stanford.je1121.model.Sach"/>-->
+<!--        </set>-->
+    </class>
+</hibernate-mapping>
